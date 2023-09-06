@@ -1,0 +1,10 @@
+image: alpine/3.18
+packages:
+  - meson
+  - obs-studio-dev
+  - pango-dev
+tasks:
+  - build: |
+      cd obs-time-source
+      meson build
+      ninja -C build
