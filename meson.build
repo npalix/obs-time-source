@@ -9,3 +9,6 @@ deps = [
 shared_library('time-source', 'time-source.c', dependencies : deps,
 	install : true, install_dir : get_option('libdir') / 'obs-plugins',
 	name_prefix : '')
+
+install_subdir('data/locale',
+	install_dir : get_option('datadir') / 'obs/obs-plugins/time-source')
