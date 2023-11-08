@@ -8,6 +8,10 @@ An OBS Studio plugin that allows you to add current date and time to scenes.
 
 ## Dependencies
 
+* Meson (`meson`)
+* A ninja-compatible build tool (e.g. `samurai`)
+* A C compiler  (e.g. `gcc`)
+* C standard library headers (e.g. `musl-dev`)
 * OBS Studio (`obs-studio-dev`)
 * PangoCairo (`pango-dev`)
 
