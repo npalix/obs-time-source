@@ -1,4 +1,4 @@
-project('obs-time-source', 'c', version : '0.1',
+project('obs-time-source', 'c', version : '0.2',
 	default_options : ['buildtype=release', 'warning_level=3'])
 
 deps = [
