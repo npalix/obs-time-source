@@ -15,8 +15,8 @@ struct time_source {
 
 	struct vec4 bg, fg, outline;
 	double outlinew;
-	char format[FORMAT_MAXLEN];
-	char font[FONT_MAXLEN];
+	char format[FORMAT_MAXLEN + 1];
+	char font[FONT_MAXLEN + 1];
 };
 
 static const char *
@@ -32,8 +32,8 @@ render(struct time_source *context)
 	/* Format time */
 	time_t t = time(NULL);
 	struct tm *tmp = localtime(&t);
-	char buf[TEXT_MAXLEN];
-	size_t sz = strftime(buf, TEXT_MAXLEN, context->format, tmp);
+	char buf[TEXT_MAXLEN + 1];
+	size_t sz = strftime(buf, TEXT_MAXLEN + 1, context->format, tmp);
 	if (!sz) {
 		buf[0] = '\0';
 	}
